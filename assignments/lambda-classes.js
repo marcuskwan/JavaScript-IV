@@ -59,9 +59,9 @@ class Student extends Person {
   // stretch "graduate" method
   graduate() {
     if (this.grade > 70) {
-      console.log(`${this.name} is ready to graduate!`);
+      console.log(`${this.name}'s score is ${this.grade}! Congrats, you are ready for graduation! :)`);
     } else {
-      console.log(`Retake the test!`);
+      console.log(`${this.name}'s score is ${this.grade}! Retake the test! :(`);
     }
   }
 }
@@ -178,8 +178,8 @@ jamie.standUp("web20_jamie");
 // testing debugsCode method
 jamie.debugsCode({ name: "Marcus" }, "Web Development");
 
-// testing addOrSubtract method via jamie PM object
+// testing addOrSubtract method via "jamie" PM object
 jamie.addOrSubtract();
 
-// testing graduate method via nicholas student object 
+// testing graduate method via "nicholas" Student object 
 nicholas.graduate();
