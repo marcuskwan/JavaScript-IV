@@ -181,5 +181,5 @@ jamie.debugsCode({ name: "Marcus" }, "Web Development");
 // testing addOrSubtract method via jamie PM object
 jamie.addOrSubtract();
 
-// testing graduate method via nicholas student
+// testing graduate method via nicholas student object 
 nicholas.graduate();
