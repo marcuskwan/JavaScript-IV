@@ -26,6 +26,18 @@ class Instructor extends Person {
   grade(studentObj, subjectStr) {
     console.log(`${studentObj.name} receives a perfect score on ${subjectStr}`);
   }
+  // stretch creating addOrSubtract method
+  addOrSubtract() {
+    // creating coin, assigning it to random # between 0 - 100
+    let coin = Math.floor(Math.random() * 101);
+    // if coin > 50, subtract coin from nicholas's grade of 80
+    if (coin > 50) {
+      nicholas.grade -= coin;
+      // else add coin from nicholas's grade of 80
+    } else {
+      nicholas.grade += coin;
+    }
+  }
 }
 
 //creating Student class
@@ -35,6 +47,8 @@ class Student extends Person {
     this.previousBackground = studentAttributes.previousBackground;
     this.className = studentAttributes.className;
     this.favSubjects = studentAttributes.favSubjects;
+    // stretch "grade" prop
+    this.grade = studentAttributes.grade;
   }
   listsSubjects() {
     console.log(this.favSubjects);
@@ -42,9 +56,18 @@ class Student extends Person {
   PRAssignment(subject) {
     console.log(`${this.name} has submitted a PR for ${subject}`);
   }
+  // stretch "graduate" method
+  graduate() {
+    if (this.grade > 70) {
+      console.log(`${this.name} is ready to graduate!`);
+    } else {
+      console.log(`Retake the test!`);
+    }
+  }
 }
 
-//creating PM class
+// creating PM class
+
 class ProjectManager extends Instructor {
   constructor(pmAttributes) {
     super(pmAttributes);
@@ -102,6 +125,7 @@ const fred = new Instructor({
   catchPhrase: "Don't forget the homies"
 });
 
+// logs fred object
 console.log(fred);
 
 // testing demo prototype method
@@ -118,7 +142,9 @@ const nicholas = new Student({
   location: "USA",
   previousBackground: "Spy",
   className: "Web20",
-  favSubjects: ["Web Development", "JavaScript", "Looking cool"]
+  favSubjects: ["Web Development", "JavaScript", "Looking cool"],
+  // stretch - added grade prop, assigned to value of 80
+  grade: 80
 });
 
 // logging nicholas object
@@ -151,3 +177,9 @@ jamie.standUp("web20_jamie");
 
 // testing debugsCode method
 jamie.debugsCode({ name: "Marcus" }, "Web Development");
+
+// testing addOrSubtract method via jamie PM object
+jamie.addOrSubtract();
+
+// testing graduate method via nicholas student
+nicholas.graduate();
