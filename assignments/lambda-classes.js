@@ -28,14 +28,14 @@ class Instructor extends Person {
   }
   // stretch creating addOrSubtract method
   addOrSubtract() {
-    // creating coin, assigning it to random # between 0 - 100
-    let coin = Math.floor(Math.random() * 101);
-    // if coin > 50, subtract coin from nicholas's grade of 80
-    if (coin > 50) {
-      nicholas.grade -= coin;
-      // else add coin from nicholas's grade of 80
+    // creating gradeChange, assigning it to random # between 0 - 100
+    let gradeChange = Math.floor(Math.random() * 101);
+    // if gradeChange > 50, subtract gradeChange from nicholas's grade of 80
+    if (gradeChange > 50) {
+      nicholas.grade -= gradeChange;
+      // else add gradeChange to nicholas's grade of 80
     } else {
-      nicholas.grade += coin;
+      nicholas.grade += gradeChange;
     }
   }
 }
